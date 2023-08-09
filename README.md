@@ -1,0 +1,1 @@
+# moodle-browser-extension
