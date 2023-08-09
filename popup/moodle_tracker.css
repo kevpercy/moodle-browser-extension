@@ -1,0 +1,9 @@
+html,
+body {
+  width: 250px;
+  font-size:12px;
+}
+
+input, button {
+  font-size:15px;
+}

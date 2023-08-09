@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+  "name": "Moodle Tracker",
+  "version": "1.0",
+  "description": "Easily search and find issues in Moodle tracker",
+  "permissions": ["activeTab"],
+  "icons": {
+    "48": "icons/icon.png"
+  },
+  "omnibox": {
+    "keyword": "mdl"
+  },
+  "browser_action": {
+    "default_icon": "icons/icon.png",
+    "default_title": "Moodle Tracker",
+    "default_popup": "popup/moodle_tracker.html"
+  },
+  "background": {
+    "persistent": false,
+    "scripts": ["moodle_omnibox.js"]
+  }
+}
+
