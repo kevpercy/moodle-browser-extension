@@ -3,6 +3,7 @@
   "name": "Moodle Tracker",
   "version": "1.0",
   "description": "Easily search and find issues in Moodle tracker",
+  "update_url": "https://github.com/kevpercy/moodle-tracker-browser-extension/blob/main/linux_chrome_autoupdate.xml",
   "permissions": ["activeTab"],
   "icons": {
     "48": "icons/icon.png"
