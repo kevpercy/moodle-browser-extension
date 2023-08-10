@@ -18,6 +18,12 @@
   "background": {
     "persistent": false,
     "scripts": ["moodle_omnibox.js"]
-  }
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "moodle-tracker-browser-extension@kevinpercy.com"
+    }
+}
+
 }
 
