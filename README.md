@@ -30,4 +30,6 @@ For example:
 
 ## Installation
 
-TBA
+### Firefox
+
+Go to the latest [Releases](https://github.com/kevpercy/moodle-tracker-browser-extension/releases) page. Click on the .xpi file and follow the instructions, and it will install automatically.
