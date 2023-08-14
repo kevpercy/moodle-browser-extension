@@ -1,24 +1,30 @@
 browser.omnibox.onInputChanged.addListener((text, suggest) => {
-    fetch('https://tracker.moodle.org/rest/api/latest/issue/MDL-' + text)
+    fetch('https://moodle.kevinpercy.com/tracker_proxy.php?search=' + text)
     .then((response) => response.json())
     .then((data) => {
-    	if (!data.length) {
+        let suggestions = [];
+        
+        data.forEach((element) => {
+            suggestions.push({
+                'description' : element.summary,
+                'content': "https://tracker.moodle.org/browse/" + element.key
+            });
+        });
+        
+        if (!suggestions.length) {
             suggest([{
-                'description': 'Failed',
-                'content': 'https://tracker.moodle.org/browse/MDL-12345'
+                'description': 'No results for ' + text,
+                'content': 'https://tracker.moodle.org/secure/QuickSearch.jspa?searchString=' + text
             }]);
         } else {
-            suggest([{
-                'description' : data[0].fields.summary,
-                'content': "https://tracker.moodle.org/browse/MDL-" + data[0].key
-            }]);
+            suggest(suggestions);
         }
     });
 });
 
 browser.omnibox.onInputEntered.addListener((url, disposition) => {
   if (url.match(/^[0-9]+$/)) {
-  url = "MDL-" + url;
+    url = "MDL-" + url;
   }
   
   if (url.substr(0, 4) !== 'http') {
@@ -39,6 +45,6 @@ browser.omnibox.onInputEntered.addListener((url, disposition) => {
 });
 
 browser.omnibox.setDefaultSuggestion({
-  description: "Search for a tracker number",
+  description: "Search Moodle Tracker",
 });
 

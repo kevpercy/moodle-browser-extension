@@ -1,30 +1,33 @@
 {
   "manifest_version": 2,
   "name": "Moodle Tracker",
-  "version": "1.0",
+  "version": "1.1",
   "description": "Easily search and find issues in Moodle tracker",
-  "update_url": "https://github.com/kevpercy/moodle-tracker-browser-extension/blob/main/linux_chrome_autoupdate.xml",
+  "update_url": "https://moodle.kevinpercy.com/linux_chrome_autoupdate.xml",
   "permissions": ["activeTab"],
   "icons": {
-    "48": "icons/icon.png"
+    "16": "icons/icon.svg",
+    "48": "icons/icon.svg"
   },
   "omnibox": {
     "keyword": "mdl"
   },
   "browser_action": {
-    "default_icon": "icons/icon.png",
+    "default_icon": "icons/icon.svg",
     "default_title": "Moodle Tracker",
     "default_popup": "popup/moodle_tracker.html"
   },
   "background": {
-    "persistent": false,
-    "scripts": ["moodle_omnibox.js"]
+    "persistent": true,
+    "scripts": [
+    	"/node_modules/webextension-polyfill/dist/browser-polyfill.min.js",
+    	"moodle_omnibox.js"
+    ]
   },
   "browser_specific_settings": {
     "gecko": {
       "id": "moodle-tracker-browser-extension@kevinpercy.com"
     }
-}
-
+  }
 }
 

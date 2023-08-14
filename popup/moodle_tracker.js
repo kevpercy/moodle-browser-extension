@@ -6,7 +6,7 @@ document.getElementById('trackerform').onsubmit = function(event) {
         trackerid = "MDL-" + trackerid;
     }
     
-    browser.tabs.create({url: "https://tracker.moodle.org/browse/" + trackerid});
+    browser.tabs.create({url: "https://tracker.moodle.org/secure/QuickSearch.jspa?searchString=" + trackerid});
         
     window.close();
 };
