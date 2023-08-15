@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Moodle Tracker",
-  "version": "1.1",
+  "version": "1.2",
   "description": "Easily search and find issues in Moodle tracker",
   "update_url": "https://moodle.kevinpercy.com/linux_chrome_autoupdate.xml",
   "permissions": ["activeTab"],
