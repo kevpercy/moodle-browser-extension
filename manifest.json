@@ -26,7 +26,8 @@
   },
   "browser_specific_settings": {
     "gecko": {
-      "id": "moodle-tracker-browser-extension@kevinpercy.com"
+      "id": "moodle-tracker-browser-extension@kevinpercy.com",
+      "update_url": "https://moodle.kevinpercy.com/firefox-update.json"
     }
   }
 }
